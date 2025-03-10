@@ -12,7 +12,7 @@ options(
 googledrive::drive_auth(cache = ".secrets", email = "innovativeopticsdatabase@gmail.com")
 googlesheets4::gs4_auth(cache = ".secrets", email = "innovativeopticsdatabase@gmail.com")
 
-sheet_id <- googledrive::drive_get("Dental_data_TESTING")$id
+sheet_id <- googledrive::drive_get("Dental_data")$id
 
 # our_data <- googlesheets4::read_sheet(sheet_id, sheet = "Lens_details") %>%
 #   mutate(VLT = scales::percent(as.numeric(VLT)),

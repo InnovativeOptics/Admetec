@@ -1,0 +1,12 @@
+name: Admetec
+title: Admetec
+username: inva
+account: inva
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 14208252
+bundleId: 9922189
+url: https://inva.shinyapps.io/Admetec/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
