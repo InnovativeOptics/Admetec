@@ -34,22 +34,8 @@ shinyUI(page_fluid(
   titlePanel( 
     windowTitle = "Admetec",
     title =  tags$head(tags$link(rel = "shortcut icon", href = "favicon.ico"))),
-  theme = andau_theme,
-                   card(class="shadow p-3 mb-5 bg-body rounded",
-                     card_header(inverse = T,fluidRow(
-                     column(6,
-                            align = 'left',
-                            h5(a(img(width = "150px",  
-                                     src = "https://www.admetec.com/wp-content/uploads/2024/07/admetec-logo.webp"), 
-                                 href = "https://www.admetec.com/", target = "new"))),
-                     column(6, align= 'right',
-                            h5("info@admetec.com"),
-                            h5("972 4 9890 747"))))
-                   ,fluidRow(column(12,align='center',
-                                    h2(strong("Search eye protection by selecting a loupe style, and a laser device"))),
-                             column(12,align='center',
-                                    h5(strong("*The user is responsible for confirming their own laser specifications"))))
-                   ),
+    theme = andau_theme,
+                   
   fluidRow(
     column(
       4,
@@ -94,10 +80,10 @@ shinyUI(page_fluid(
                    class = "btn-primary"))
   ),
   br(),
-  fluidRow(
-    column(12,
-           p("Your information not available in the dropdowns? Contact Innovative Optics at (763) 425-7789"))
-  ),
+  #fluidRow(
+  #  column(12,
+  #         p("Your information not available in the dropdowns? Contact Innovative Optics at (763) 425-7789"))
+  #),
                        conditionalPanel(
                          condition = "input.run",
                          card(class="shadow p-3 mb-5 bg-body rounded",
@@ -124,15 +110,15 @@ shinyUI(page_fluid(
                            column(4, align = 'center',
                                   imageOutput("rec3"),
                                   tableOutput("tableRec3")))
-                         )),
-                       card(class="shadow p-3 mb-5 bg-body rounded",
-                         card_footer(h5(
-                         style = {
-                           "color: #0FE410;
-                         text-shadow: 1px 1px 1px black;"
-                         },
-                         "Powered by Innovative Optics"))
-                         )
+                         ))#,
+                      # card(class="shadow p-3 mb-5 bg-body rounded",
+                      #   card_footer(h5(
+                      #   style = {
+                      #     "color: #0FE410;
+                      #   text-shadow: 1px 1px 1px black;"
+                      #   },
+                      #   "Powered by Innovative Optics"))
+                      #   )
   )
                    )
 
