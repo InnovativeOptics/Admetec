@@ -28,7 +28,7 @@ andau_theme <- bs_theme(version = 5,
                         base_font  = font_google("Open Sans"),
                         bg = "white",
                         fg = "#1f0900",
-                        primary = "#6532c3")
+                        primary = "#AE132A")
 # Define application UI
 shinyUI(page_fluid(
   titlePanel( 
@@ -42,7 +42,7 @@ shinyUI(page_fluid(
       align = 'center',
       selectInput(
         inputId = "loupestyle",
-        label = h4(strong("Loupe Style")),
+        label = h4(strong("Loupe Frame")),
         choices = sort(andau_data$`Andau Frame`),
         selected = NULL
       )
@@ -57,6 +57,7 @@ shinyUI(page_fluid(
         selected = NULL
       )
     ),
+    
     column(
       4,
       align = 'center',
@@ -67,18 +68,38 @@ shinyUI(page_fluid(
         selected = NULL
       )
     )),
+  
   fluidRow(
     
     column(
       12,
       align = "center",
       br(),
-      actionButton("run",
-                   icon = icon("magnifying-glass"),
-                   style='padding-left:50px;padding-right:50px;padding-top:1px;padding-bottom:1px; font-size:80%',
-                   h5(strong("Search")),
-                   class = "btn-primary"))
+      
+      actionButton(
+        inputId = "run",
+        label = tagList(
+          icon("magnifying-glass"),
+          span(strong("Search"), style = "font-size: 16px; margin-left: 5px;")
+        ),
+        style = 'padding-left:30px;padding-right:30px;padding-top:1px;padding-bottom:1px;',
+        class = "btn-primary"
+      )      
+      
+      
+ #     actionButton("run",
+#                   icon = icon("magnifying-glass"),
+#                   style='padding-left:50px;padding-right:50px;padding-top:1px;padding-bottom:1px; font-size:80%',
+#                   h5(strong("Search")),
+#                   class = "btn-primary")
+      
+      
+      
+      )
   ),
+  
+  
+  
   br(),
   #fluidRow(
   #  column(12,

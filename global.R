@@ -24,7 +24,7 @@ sheet_id <- googledrive::drive_get("Dental_data")$id
 
 
 andau_data <- googlesheets4::read_sheet(sheet_id, sheet = "Loupe_types", col_types = "c")  %>%
-  filter(`Mfg` == "Andau") %>%
+  filter(`Mfg` == "Admetec") %>%
   rename(`Andau Frame` = Mod, Style = Size, `Innovative Optics Insert` = `Insert Part Number`)
 
 # Load dental data
